@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> {{page_title .PageTitle}} </title>
+
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/apollo.css">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <script src="https://cdn.staticfile.org/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap-paginator.min.js"></script>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        {{ template "components/_header.tpl" . }}
+      </div>
+      <div class="body container">
+        {{template "components/_flash.tpl" .}}
+        {{ if .LayoutContent }}{{ .LayoutContent }} {{ end }}
+      </div>
+      <div class="footer">
+        {{ template "components/_footer.tpl" . }}
+      </div>
+    </div>
+  </body>
+</html>
